@@ -2,6 +2,9 @@
 
 个人佛学自修工具，**微信小程序 + 静态网站** 双端：
 
+> 🌐 **网站已上线：** <https://demoncplus.github.io/jingxin-rike/>
+> （源码仓库：<https://github.com/demoncplus/jingxin-rike>，网站更新运行 `tools/deploy-website.sh` 即可）
+
 - 📿 念佛计数（本地存储、每日目标、进度）
 - 📖 经文诵读（心经 / 大悲咒 / 往生咒 / 准提咒 / 日课简轨 / 回向文，字号调节、夜间模式）
 - 🪷 回向墙（写心愿、本地保存，预留云端同步接口）
@@ -30,7 +33,7 @@ docs/
 
 **小程序**：微信开发者工具 → 导入项目 → 选择 `miniprogram/` 目录（AppID 先用默认测试号，注册个人小程序后换成自己的）。
 
-**网站**：直接双击 `website/index.html` 即可本地预览；部署到免费托管时把 `website/` 整个目录上传（步骤见 docs/上线与升级指南.md）。
+**网站**：已部署在 GitHub Pages（gh-pages 分支）。本地预览直接双击 `website/index.html`；以后改动 `website/` 后运行 `bash tools/deploy-website.sh` 即可重新发布（约 1 分钟生效）。
 
 ## 收款双模式（关键设计）
 
