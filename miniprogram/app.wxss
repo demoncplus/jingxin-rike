@@ -1,0 +1,87 @@
+/* 全局样式 —— 宣纸色 + 墨色 + 朱红点缀的素雅风 */
+page {
+  --paper: #f7f3ea;
+  --card: #fffdf6;
+  --ink: #3b3630;
+  --ink2: #857c6b;
+  --line: #e7ddc9;
+  --accent: #9e3d33;
+  --accent-soft: #f3e5e0;
+  --gold: #b08d57;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 30rpx;
+  line-height: 1.7;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.serif {
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimSun", serif;
+}
+
+.card {
+  background: var(--card);
+  border: 1rpx solid var(--line);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
+.muted {
+  color: var(--ink2);
+  font-size: 26rpx;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  padding: 22rpx 0;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary:active {
+  opacity: 0.85;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1rpx solid var(--accent);
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  padding: 16rpx 0;
+  text-align: center;
+}
+
+.chip {
+  display: inline-block;
+  padding: 8rpx 24rpx;
+  border-radius: 999rpx;
+  border: 1rpx solid var(--line);
+  color: var(--ink2);
+  font-size: 26rpx;
+  margin: 0 16rpx 16rpx 0;
+  background: var(--card);
+}
+
+.chip.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.divider {
+  height: 1rpx;
+  background: var(--line);
+  margin: 24rpx 0;
+}
+
+.footer-note {
+  text-align: center;
+  color: var(--ink2);
+  font-size: 24rpx;
+  padding: 40rpx 0 60rpx;
+}

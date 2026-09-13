@@ -1,0 +1,80 @@
+.wrap {
+  padding: 24rpx 28rpx;
+}
+
+.hero {
+  text-align: center;
+  padding: 48rpx 32rpx;
+}
+
+.lunar {
+  font-size: 88rpx;
+  color: var(--accent);
+  margin: 12rpx 0 4rpx;
+  letter-spacing: 4rpx;
+}
+
+.quote {
+  font-size: 32rpx;
+  color: var(--ink);
+  line-height: 2;
+}
+
+.stats {
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-line {
+  width: 1rpx;
+  height: 56rpx;
+  background: var(--line);
+}
+
+.num {
+  font-size: 52rpx;
+  color: var(--accent);
+  line-height: 1.3;
+}
+
+.entry {
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.entry-hover {
+  opacity: 0.85;
+}
+
+.entry-icon {
+  font-size: 48rpx;
+  margin-right: 24rpx;
+}
+
+.entry-body { flex: 1; }
+
+.entry-title {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.entry-arrow {
+  color: var(--ink2);
+  font-size: 44rpx;
+}
+
+.donate-link {
+  text-align: center;
+  color: var(--accent);
+  font-size: 30rpx;
+  padding: 36rpx 0 8rpx;
+  text-decoration: underline;
+}

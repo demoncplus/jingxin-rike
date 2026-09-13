@@ -1,0 +1,27 @@
+<view class="wrap">
+  <view class="card head-card">
+    <view class="head-icon">🪷</view>
+    <view class="head-title serif">静心日课</view>
+    <view class="muted">今日佛号 {{todayCount}} 声</view>
+  </view>
+
+  <view class="card cell" bindtap="openDonation" hover-class="cell-hover">
+    <text>🧧</text><text class="cell-text">功德箱 · 随喜支持</text><text class="arrow">›</text>
+  </view>
+
+  <view class="card cell" bindtap="showAbout" hover-class="cell-hover">
+    <text>ℹ️</text><text class="cell-text">关于</text><text class="arrow">›</text>
+  </view>
+
+  <view class="card cell" bindtap="showPrivacy" hover-class="cell-hover">
+    <text>🔒</text><text class="cell-text">数据与隐私</text><text class="arrow">›</text>
+  </view>
+
+  <view class="card cell" bindtap="clearData" hover-class="cell-hover">
+    <text>🧹</text><text class="cell-text">清除本地数据</text><text class="arrow">›</text>
+  </view>
+
+  <view class="footer-note">v{{version}} · 本应用为个人学习工具，不代收善款</view>
+
+  <donation-sheet id="donationSheet" />
+</view>

@@ -1,0 +1,46 @@
+<view class="wrap">
+  <view class="phrase serif">{{phrase}}</view>
+
+  <view class="counter-area">
+    <view class="counter serif" bindtap="tapCount" hover-class="counter-press">
+      <view class="counter-num">{{session}}</view>
+      <view class="counter-label">轻触计数</view>
+    </view>
+  </view>
+
+  <view class="card info">
+    <view class="row">
+      <view class="cell">
+        <view class="cell-num serif">{{today}}</view>
+        <view class="muted">今日佛号</view>
+      </view>
+      <view class="cell">
+        <view class="cell-num serif">{{target}}</view>
+        <view class="muted">每日目标</view>
+      </view>
+      <view class="cell">
+        <view class="cell-num serif">{{percent}}%</view>
+        <view class="muted">今日完成</view>
+      </view>
+    </view>
+    <view class="progress">
+      <view class="progress-in" style="width: {{percent}}%"></view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="muted">每日目标</view>
+    <view class="target-row">
+      <view
+        class="chip {{target === item ? 'on' : ''}}"
+        wx:for="{{targets}}"
+        wx:key="*this"
+        data-t="{{item}}"
+        bindtap="pickTarget"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <view class="btn-ghost reset" bindtap="resetSession">本次清零</view>
+  <view class="footer-note">计数保存在手机本地，不出本机、不上传</view>
+</view>

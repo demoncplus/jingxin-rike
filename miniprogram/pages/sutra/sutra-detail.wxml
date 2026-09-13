@@ -1,0 +1,17 @@
+<view class="reader {{dark ? 'dark' : ''}}">
+  <view class="head">
+    <view class="r-title serif">{{sutra.title}}</view>
+    <view class="r-meta muted">{{sutra.meta}}</view>
+  </view>
+
+  <view class="body serif">
+    <view class="para" style="font-size: {{fontSize}}rpx" wx:for="{{sutra.paragraphs}}" wx:key="index">{{item}}</view>
+  </view>
+
+  <view class="tools">
+    <view class="tool" bindtap="zoomOut">A－</view>
+    <view class="tool" bindtap="toggleDark">{{dark ? '☀️ 日间' : '🌙 夜间'}}</view>
+    <view class="tool" bindtap="zoomIn">A＋</view>
+    <view class="tool" bindtap="copyAll">复制</view>
+  </view>
+</view>

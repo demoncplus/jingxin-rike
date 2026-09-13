@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "回向墙",
+  "usingComponents": {
+    "donation-sheet": "/components/donation-sheet/donation-sheet"
+  }
+}

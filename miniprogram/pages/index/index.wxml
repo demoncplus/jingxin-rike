@@ -1,0 +1,53 @@
+<view class="wrap">
+  <view class="card hero">
+    <view class="muted">{{dateText}} · {{weekText}}</view>
+    <view class="lunar serif">{{lunarText}}</view>
+    <view class="muted">{{gzText}}</view>
+    <view class="divider"></view>
+    <view class="quote serif">“{{quote}}”</view>
+  </view>
+
+  <view class="card stats">
+    <view class="stat" bindtap="goCount">
+      <view class="num serif">{{monthCount}}</view>
+      <view class="muted">本月念佛</view>
+    </view>
+    <view class="stat-line"></view>
+    <view class="stat" bindtap="goWall">
+      <view class="num serif">{{wallCount}}</view>
+      <view class="muted">回向心愿</view>
+    </view>
+  </view>
+
+  <view class="entry card" bindtap="goCount" hover-class="entry-hover">
+    <text class="entry-icon">📿</text>
+    <view class="entry-body">
+      <view class="entry-title">念佛计数</view>
+      <view class="muted">摄心一串，日日不断</view>
+    </view>
+    <view class="entry-arrow">›</view>
+  </view>
+
+  <view class="entry card" bindtap="goSutra" hover-class="entry-hover">
+    <text class="entry-icon">📖</text>
+    <view class="entry-body">
+      <view class="entry-title">诵读经文</view>
+      <view class="muted">心经 · 大悲咒 · 日课简轨</view>
+    </view>
+    <view class="entry-arrow">›</view>
+  </view>
+
+  <view class="entry card" bindtap="goWall" hover-class="entry-hover">
+    <text class="entry-icon">🪷</text>
+    <view class="entry-body">
+      <view class="entry-title">回向墙</view>
+      <view class="muted">写下心愿，功不唐捐</view>
+    </view>
+    <view class="entry-arrow">›</view>
+  </view>
+
+  <view class="donate-link" bindtap="openDonation">随喜支持 · 功德箱</view>
+  <view class="footer-note">本小程序不代收善款，随喜经官方公益平台直达项目方</view>
+
+  <donation-sheet id="donationSheet" />
+</view>

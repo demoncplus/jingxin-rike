@@ -1,0 +1,18 @@
+<view class="wrap">
+  <view class="card group" wx:for="{{groups}}" wx:key="category" wx:for-item="g">
+    <view class="muted group-cat">{{g.category}}</view>
+    <view
+      class="sutra-item"
+      wx:for="{{g.items}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="openDetail"
+      hover-class="sutra-hover"
+    >
+      <view class="sutra-title serif">{{item.alias}}</view>
+      <view class="sutra-name">{{item.title}}</view>
+      <view class="muted">{{item.meta}}</view>
+    </view>
+  </view>
+  <view class="footer-note">经文均为古籍原文，持续收录中</view>
+</view>

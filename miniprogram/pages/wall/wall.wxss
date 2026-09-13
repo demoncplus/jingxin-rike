@@ -1,0 +1,78 @@
+.wrap {
+  padding: 24rpx 28rpx;
+}
+
+.form-title {
+  font-size: 38rpx;
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 24rpx;
+}
+
+.input {
+  background: #ffffff;
+  border: 1rpx solid var(--line);
+  border-radius: 16rpx;
+  padding: 18rpx 24rpx;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 160rpx;
+  background: #ffffff;
+  border: 1rpx solid var(--line);
+  border-radius: 16rpx;
+  padding: 18rpx 24rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.tags {
+  margin: 24rpx 0 8rpx;
+}
+
+.tip-card {
+  margin-top: 24rpx;
+}
+
+.item {
+  margin-bottom: 24rpx;
+}
+
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.item-to {
+  color: var(--accent);
+  font-size: 28rpx;
+}
+
+.item-text {
+  font-size: 30rpx;
+  line-height: 1.9;
+}
+
+.item-tag {
+  margin-top: 16rpx;
+}
+
+.item-hint {
+  margin-top: 12rpx;
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.empty-icon {
+  font-size: 72rpx;
+  margin-bottom: 16rpx;
+}

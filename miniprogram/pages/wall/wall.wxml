@@ -1,0 +1,60 @@
+<view class="wrap">
+  <view class="card form">
+    <view class="form-title serif">今日回向</view>
+    <input
+      class="input"
+      placeholder="回向给谁？（可留空，默认一切众生）"
+      value="{{to}}"
+      bindinput="inputTo"
+      maxlength="20"
+    />
+    <textarea
+      class="textarea"
+      placeholder="写下你的心愿或回向文……"
+      value="{{text}}"
+      bindinput="inputText"
+      maxlength="100"
+    ></textarea>
+    <view class="tags">
+      <view
+        class="chip {{tag === item ? 'on' : ''}}"
+        wx:for="{{tags}}"
+        wx:key="*this"
+        data-t="{{item}}"
+        bindtap="pickTag"
+      >{{item}}</view>
+    </view>
+    <view class="btn-primary" bindtap="submit">上墙回向</view>
+  </view>
+
+  <view class="card tip-card">
+    <view class="muted">常见回向文：愿以此功德，庄严佛净土，上报四重恩，下济三途苦。</view>
+  </view>
+
+  <view class="wall-list">
+    <view
+      class="card item"
+      wx:for="{{items}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindlongpress="removeItem"
+    >
+      <view class="item-head">
+        <view class="item-to">回向给 · {{item.to}}</view>
+        <view class="muted">{{item.date}}</view>
+      </view>
+      <view class="item-text">{{item.text}}</view>
+      <view class="item-tag chip on">{{item.tag}}</view>
+      <view class="muted item-hint">长按可删除</view>
+    </view>
+
+    <view wx:if="{{items.length === 0}}" class="card empty">
+      <view class="empty-icon">🪷</view>
+      <view class="muted">还没有回向，写下第一句吧</view>
+    </view>
+  </view>
+
+  <view class="footer-note">回向保存在本机 · 未来升级后将支持云端共修同步</view>
+
+  <donation-sheet id="donationSheet" />
+</view>

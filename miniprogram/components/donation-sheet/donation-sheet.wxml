@@ -1,0 +1,33 @@
+<view class="ds-overlay" wx:if="{{visible}}" bindtap="close">
+  <view class="ds-sheet" catchtap="noop">
+    <view class="ds-grab"></view>
+    <view class="ds-title serif">功德箱 · 随喜</view>
+    <view class="ds-tip muted">{{tip}}</view>
+
+    <block wx:if="{{mode === 'self'}}">
+      <view class="ds-label">选择随喜金额</view>
+      <view class="ds-amounts">
+        <view
+          class="ds-amount {{item === amount ? 'on' : ''}}"
+          wx:for="{{amounts}}"
+          wx:key="*this"
+          data-item="{{item}}"
+          bindtap="pickAmount"
+        >{{item}} 元</view>
+      </view>
+      <view class="ds-btn" bindtap="paySelf">微信支付 · 随喜 {{amount}} 元</view>
+      <view class="ds-note muted">支付由微信支付提供，善款进入宗教活动场所对公账户，可申请捐赠票据。</view>
+    </block>
+
+    <block wx:else>
+      <view class="ds-channel" wx:for="{{channels}}" wx:key="id">
+        <view class="ds-ch-name">{{item.name}}</view>
+        <view class="ds-ch-desc muted">{{item.desc}}</view>
+        <view class="ds-btn" data-index="{{index}}" bindtap="goChannel">前往随喜</view>
+      </view>
+      <view class="ds-note muted">将复制官方平台链接，捐赠直接在官方平台完成。</view>
+    </block>
+
+    <view class="ds-close muted" bindtap="close">取消</view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/count/count",
+    "pages/sutra/sutra",
+    "pages/sutra/sutra-detail",
+    "pages/wall/wall",
+    "pages/me/me"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#f7f3ea",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "静心日课",
+    "backgroundColor": "#f7f3ea",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#8a8378",
+    "selectedColor": "#9e3d33",
+    "backgroundColor": "#fbf9f3",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "日课" },
+      { "pagePath": "pages/count/count", "text": "念佛" },
+      { "pagePath": "pages/sutra/sutra", "text": "经文" },
+      { "pagePath": "pages/wall/wall", "text": "回向" },
+      { "pagePath": "pages/me/me", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
